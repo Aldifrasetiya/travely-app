@@ -1,0 +1,111 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Rute</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="jadwal">
+    <ion-card class="schedule-card">
+      <div class="content">      
+        <div class="row-info">
+          <img width="25" height="25" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1"/>
+          <p>Keberangkatan 1</p>
+          <img width="25" height="25" src="https://img.icons8.com/ios-filled/50/marker.png" alt="marker"/>
+          <p>Tujuan 1</p>
+        </div>
+        <div class="row">
+          <div class="price">
+            <p>Tersedia <span>3</span> kursi</p>
+            <a [routerLink]="['/tabs/home/jadwal']"><img class="arrow-img" width="32" height="32" src="https://img.icons8.com/windows/32/circled-chevron-right.png" alt="circled-chevron-right"/></a>
+          </div>
+        </div>
+      </div>
+    </ion-card>
+    <ion-card class="schedule-card">
+      <div class="content">      
+        <div class="row-info">
+          <img width="25" height="25" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1"/>
+          <p>Keberangkatan 1</p>
+          <img width="25" height="25" src="https://img.icons8.com/ios-filled/50/marker.png" alt="marker"/>
+          <p>Tujuan 1</p>
+        </div>
+        <div class="row">
+          <div class="price">
+            <p>Tersedia <span>3</span> kursi</p>
+            <a [routerLink]="['/tabs/home/jadwal']"><img class="arrow-img" width="32" height="32" src="https://img.icons8.com/windows/32/circled-chevron-right.png" alt="circled-chevron-right"/></a>
+          </div>
+        </div>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>
+
+<!-- <ion-content [fullscreen]="true">
+    <ion-card>
+      <div id="heading">
+        <img width="50" height="50" src="https://img.icons8.com/ios/50/van.png" alt="van"/>
+        <h1>Travely 11</h1>
+      </div>
+      <ion-card-content>
+        <img width="25" height="25" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1"/>
+        <p>Keberangkatan 1</p>
+        <img width="25" height="25" src="https://img.icons8.com/ios-filled/50/marker.png" alt="marker"/>
+        <p>Tujuan 1</p>
+      </ion-card-content>
+      <ion-card-content>
+        <p>mulai dari</p>
+      </ion-card-content>
+      <ion-card-header>
+        <ion-card-title>
+          <h1>Rp./orang</h1>
+        </ion-card-title>
+        <img class="arrow" width="32" height="32" src="https://img.icons8.com/windows/32/circled-chevron-right.png" alt="circled-chevron-right"/>
+      </ion-card-header>
+    </ion-card>
+    <ion-card>
+      <div id="heading">
+        <img width="50" height="50" src="https://img.icons8.com/ios/50/van.png" alt="van"/>
+        <h1>Travely 2</h1>
+      </div>
+      <ion-card-content>
+        <img width="25" height="25" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1"/>
+        <p>Keberangkatan 1</p>
+        <img width="25" height="25" src="https://img.icons8.com/ios-filled/50/marker.png" alt="marker"/>
+        <p>Tujuan 1</p>
+      </ion-card-content>
+      <ion-card-content>
+        <p>mulai dari</p>
+      </ion-card-content>
+      <ion-card-header>
+        <ion-card-title>
+          <h1>Rp./orang</h1>
+        </ion-card-title>
+        <img class="arrow" width="32" height="32" src="https://img.icons8.com/windows/32/circled-chevron-right.png" alt="circled-chevron-right"/>
+      </ion-card-header>
+    </ion-card>
+    <ion-card>
+      <div id="heading">
+        <img width="50" height="50" src="https://img.icons8.com/ios/50/van.png" alt="van"/>
+        <h1>Travely 3</h1>
+      </div>
+      <ion-card-content>
+        <img width="25" height="25" src="https://img.icons8.com/ios/50/marker--v1.png" alt="marker--v1"/>
+        <p>Keberangkatan 1</p>
+        <img width="25" height="25" src="https://img.icons8.com/ios-filled/50/marker.png" alt="marker"/>
+        <p>Tujuan 1</p>
+      </ion-card-content>
+      <ion-card-content>
+        <p>mulai dari</p>
+      </ion-card-content>
+      <ion-card-header>
+        <ion-card-title>
+          <h1>Rp./orang</h1>
+        </ion-card-title>
+        <img class="arrow" width="32" height="32" src="https://img.icons8.com/windows/32/circled-chevron-right.png" alt="circled-chevron-right"/>
+      </ion-card-header>
+    </ion-card>
+</ion-content> -->

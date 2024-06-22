@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/info-penumpang"></ion-back-button>
+    </ion-buttons>
+    <ion-title size="large">Pilih Metode Pembayaran</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <ion-list>
+    <ion-item class="title" color="#D9D9D9">
+      <p>Transfer</p>
+      </ion-item>
+    <ion-item class="route">
+      <ion-button class="button-content" href="seat" fill="clear">
+      </ion-button>
+      <img src="assets/icon/logo-mandiri.png" alt="Logo-mandiri" width="50" height="40">
+      <p>Bank Mandiri</p>
+      <!-- <a [routerLink]="['/tabs/home/jadwal']"><img class="arrow-img" width="32" height="32" src="https://img.icons8.com/windows/32/circled-chevron-right.png" alt="circled-chevron-right"/></a> -->
+    </ion-item>
+    <ion-item class="route">
+      <ion-button class="button-content" href="seat" fill="clear">
+      </ion-button>
+      <img src="assets/icon/logo-bca.png" alt="Logo-mandiri" width="40" height="30">
+      <p>Bank BCA</p>
+      <!-- <a [routerLink]="['/tabs/home/jadwal']"><img class="arrow-img" width="32" height="32" src="https://img.icons8.com/windows/32/circled-chevron-right.png" alt="circled-chevron-right"/></a> -->
+    </ion-item>
+  </ion-list>
+</ion-content>

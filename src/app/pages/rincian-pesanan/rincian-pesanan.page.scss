@@ -1,0 +1,71 @@
+ion-toolbar {
+    --background: #5755FE;
+    --color: white;
+    text-align: center;
+}
+
+ion-content {
+    --background: #f8f8f8;
+}
+
+.title {
+    // background-color: #D9D9D9;
+    font-weight: bold;
+    // padding: 10px;
+    // margin-top: 10px;
+}
+
+.route {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // padding: 10px;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    // padding: 10px;
+}
+
+.detail-label {
+    display: grid;
+    // align-items: center;
+    // justify-content: space-between;
+    // width: 100%;
+    // padding: 5px 0;
+}
+
+.detail-label  > p{
+    margin: 8px 0 8px 0;
+}
+
+.seat-info {
+    display: flex;
+    justify-content: space-between;
+    // padding: 10px;
+}
+
+.price-details {
+    display: flex;
+    // padding: 10px;
+}
+
+.price-details > div > p > span {
+text-align: start;
+}
+
+.total-price {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    // padding: 10px;
+}
+
+ion-button {
+    --background: #3b82f6;
+    --border-radius: 20px;
+    margin: 20px;
+}
+      

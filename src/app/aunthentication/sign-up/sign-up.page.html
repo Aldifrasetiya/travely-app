@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <!-- <img width="70" src="assets/icon/travelyicon.png" alt="Travely Icon"> -->
+    <ion-title size="large">Register</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/sign-in"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-card>
+      <ion-card-header>
+        <!-- <img src="assets/icon/travelyicon2.png" alt="Travely Icon2"> -->
+        <h1>Buat Akun!</h1>
+        <p>Daftar Untuk memulai.</p>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <ion-input [(ngModel)]="name" label="Name" label-placement="floating" fill="outline" placeholder="masukkan nama"></ion-input>
+        <br>
+        <ion-input [(ngModel)]="email" label="Email" label-placement="floating" fill="outline" placeholder="masukkan email"></ion-input>
+        <br>
+        <ion-input [(ngModel)]="password" type="password" label="Password" label-placement="floating" fill="outline" placeholder="masukkan password"></ion-input>
+        <br>
+        <ion-input [(ngModel)]="confirmPassword" type="password" label="Confirm Password" label-placement="floating" fill="outline" placeholder="konfirmasi password"></ion-input>
+        <br>
+        <ion-input [(ngModel)]="no_telp" label="No. Telepon" label-placement="floating" fill="outline" placeholder="masukkan no telepon"></ion-input>
+        <br>
+        <ion-input [(ngModel)]="alamat" label="Alamat" label-placement="floating" fill="outline" placeholder="masukkan alamat"></ion-input>
+        <br>
+        <ion-button (click)="onRegister()" id="submit" type="submit" expand="block">Register</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

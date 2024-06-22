@@ -1,0 +1,175 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <h1 id="flex-center">Tiket</h1>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <!-- <div class="content">
+    <ion-card class="icon-card">
+      <div class="card-logo">
+        <img src="/assets/icon/ubp.png" alt="UBP Logo"/>
+        <img src="/assets/icon/ekraf_karawang.png" alt="Ekraf Karawang Logo"/>
+      </div>
+      <ion-card-header>
+        <ion-card-title>Iman Sanjaya</ion-card-title>
+        <ion-card-subtitle>Game Developer</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="balance">
+          <span>Karawang</span>
+          <h2>Tirta Mulya</h2>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div> -->
+
+<div id="navbar">
+  <ion-segment [(ngModel)]="selectedSegment" (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="pesanan">
+      <ion-label>Pesanan</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="riwayat">
+      <ion-label>Riwayat</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</div>
+
+<div class="segment-proses" *ngIf="selectedSegment === 'pesanan'">
+  <ion-title>
+    <p class="booking-date">Tanggal Pemesanan:</p>
+  </ion-title>
+  <div class="card">
+    <div class="header">
+      <div class="greeting">
+        <p>Kode Pemesanan:</p>
+        </div>
+    </div>
+    <div class="content">
+      <ion-button class="button-content" href="invoice-payment" fill="clear">
+      </ion-button>
+      <div class="heading">
+        <img width="50" height="50" src="https://img.icons8.com/ios/50/van.png" alt="van" />
+        <h1>Travely</h1>
+      </div>
+      <div class="sub-head">
+        <p>Rute</p>
+        <p class="paid-status">Lunas</p>
+      </div>
+      <div class="sub-content">
+        <p>Total Harga</p>
+        <p>Rp. 0</p>
+      </div>
+    </div>
+  </div>
+
+  <ion-title>
+    <p class="booking-date">Tanggal Pemesanan:</p>
+  </ion-title>
+  <div class="card">
+    <div class="header">
+      <div class="greeting">
+        <p>Kode Pemesanan:</p>
+      </div>
+    </div>
+    <div class="content">
+      <ion-button class="button-content" href="invoice-payment" fill="clear">
+      </ion-button>
+      <div class="heading">
+        <img width="50" height="50" src="https://img.icons8.com/ios/50/van.png" alt="van" />
+        <h1>Travely</h1>
+      </div>
+      <div class="sub-head">
+        <p>Rute</p>
+        <p class="paid-status">Belum Bayar</p>
+        </div>
+      <div class="sub-content">
+        <p>Total Harga</p>
+        <p>Rp. 0</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="segment-riwayat" *ngIf="selectedSegment === 'riwayat'">
+  <ion-title>
+    <p class="booking-date">Tanggal Pemesanan:</p>
+  </ion-title>
+  <div class="card">
+    <div class="header">
+      <div class="greeting">
+        <p>Kode Pemesanan:</p>
+        </div>
+    </div>
+    <div class="content">
+      <ion-button class="button-content" href="invoice-payment" fill="clear">
+      </ion-button>
+      <div class="heading">
+        <img width="50" height="50" src="https://img.icons8.com/ios/50/van.png" alt="van" />
+        <h1>Travely</h1>
+      </div>
+      <div class="sub-head">
+        <p>Rute</p>
+        <p class="paid-status">Selesai</p>
+      </div>
+      <div class="sub-content">
+        <p>Total Harga</p>
+        <p>Rp. 0</p>
+      </div>
+    </div>
+  </div>
+
+  <ion-title>
+    <p class="booking-date">Tanggal Pemesanan:</p>
+  </ion-title>
+  <div class="card">
+    <div class="header">
+      <div class="greeting">
+        <p>Kode Pemesanan:</p>
+      </div>
+    </div>
+    <div class="content">
+      <ion-button class="button-content" href="invoice-payment" fill="clear">
+      </ion-button>
+      <div class="heading">
+        <img width="50" height="50" src="https://img.icons8.com/ios/50/van.png" alt="van" />
+        <h1>Travely</h1>
+      </div>
+      <div class="sub-head">
+        <p>Rute</p>
+        <p class="paid-status">Dibatalkan</p>
+        </div>
+      <div class="sub-content">
+        <p>Total Harga</p>
+        <p>Rp. 0</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- <ion-title><p>Tanggal Pemesanan:</p></ion-title>
+
+  <div class="card">
+    <div class="header">
+      <div class="greeting">
+        <p>Kode Pemesanan: </p>
+      </div>
+    </div>
+    <div class="content">
+      <div class="heading">
+        <img width="50" height="50" src="https://img.icons8.com/ios/50/van.png" alt="van"/>
+        <h1>Travely 1</h1>
+      </div>
+      <div class="sub-head">
+        <h2>Rute</h2>
+        <p>Total Harga</p>
+      </div>
+      <div class="sub-content">
+        <h2>Rp./orang</h2>
+        <h3 color="danger">Lunas</h3>
+        <img class="arrow" width="32" height="32" src="https://img.icons8.com/windows/32/circled-chevron-right.png" alt="circled-chevron-right"/>
+      </div>
+    </div>
+  </div> -->
+</ion-content>

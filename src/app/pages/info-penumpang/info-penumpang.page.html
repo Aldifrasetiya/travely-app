@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="seat"></ion-back-button>
+    </ion-buttons>
+    <ion-title size="large">Informasi Penumpang</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-card>
+      <ion-card-content class="ion-text-start">
+        <p>Penumpang Kursi 8</p>
+        <ion-input label-placement="floating" fill="outline"></ion-input>
+        <br />
+        <p>Penumpang Kursi 8</p>
+        <ion-input label-placement="floating" fill="outline"></ion-input>
+        <br>
+        <p>Kursi Dipilih {{selectedSeats.length}}/{{totalSeats}}</p>
+        <p>Total Harga Rp. {{totalPrice | currency:'IDR':'symbol':'1.0-0'}}</p>
+        <ion-button (click)="onSubmit()" id="submit" type="submit" expand="block" shape="round">Lanjut Pembayaran</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

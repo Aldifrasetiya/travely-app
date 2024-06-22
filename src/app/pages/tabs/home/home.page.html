@@ -1,0 +1,157 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-card>
+      <div class="swiper">
+        <swiper-container
+          (slideChange)="swiperSlideChange($event)"
+          [loop]="true"
+          [pagination]="true">
+            <swiper-slide *ngFor="let image of images">
+              <div class="swiper-zoom-container">
+                <img [src]="" alt="advertisement">
+              </div>
+            </swiper-slide>
+        </swiper-container>
+      </div>
+    </ion-card>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <h1>Reservasi Tiket</h1>
+    <div id="form-input">
+      <div #page>
+        <ion-input label="Berangkat dari" label-placement="floating" fill="outline"
+        placeholder="Pilih lokasi keberangkatan" id="open-modal" [(ngModel)]="fromLocation"></ion-input>
+        <ion-modal #modal trigger="open-modal" [canDismiss]="canDismiss" [presentingElement]="page">
+          <ng-template>
+            <ion-header>
+              <ion-toolbar>
+                <ion-searchbar [(ngModel)]="searchQuery" (ionInput)="filterLocations()"></ion-searchbar>
+                <ion-buttons slot="end">
+                  <ion-button (click)="modal.dismiss()">X</ion-button>
+                </ion-buttons>
+              </ion-toolbar>
+            </ion-header>
+            <ion-content class="ion-padding">
+              <ion-list>
+                <ion-item [color]="getColor(location, 'from')" *ngFor="let location of filteredLocations" (click)="selectLocation(location, 'from')">
+                 {{ location.daerah }}, {{ location.provinsi }}
+                </ion-item>
+              </ion-list>
+            </ion-content>
+          </ng-template>
+        </ion-modal>
+        <br>
+        <ion-input label="Untuk Tujuan" label-placement="floating" fill="outline"
+        placeholder="Pilih lokasi tujuan" id="open-modal-2" [(ngModel)]="toLocation"></ion-input>
+        <ion-modal #modal trigger="open-modal-2" [canDismiss]="canDismiss" [presentingElement]="page">
+          <ng-template>
+            <ion-header>
+              <ion-toolbar>
+                <ion-searchbar [(ngModel)]="searchQuery" (ionInput)="filterLocations()"></ion-searchbar>
+                <ion-buttons slot="end">
+                  <ion-button (click)="modal.dismiss()">X</ion-button>
+                </ion-buttons>
+              </ion-toolbar>
+            </ion-header>
+            <ion-content class="ion-padding">
+              <ion-list>
+                <ion-item [color]="getColor(location, 'to')" *ngFor="let location of filteredLocations" (click)="selectLocation(location, 'to')">
+                  {{ location.daerah }}, {{ location.provinsi }}
+                </ion-item>
+              </ion-list>
+            </ion-content>
+          </ng-template>
+        </ion-modal>
+        <br>
+        <ion-input class="calendar" type="date" fill="outline" placeholder="Tanggal Berangkat" id="open-modal-3">
+          <!-- <ion-datetime-button slot="end" datetime="datetime"></ion-datetime-button> -->
+          <!-- <ion-icon name="calendar-outline" slot="end"></ion-icon> -->
+          <!-- <ion-button fill="clear" slot="end" aria-label="Show/hide">
+          </ion-button> -->
+        </ion-input>
+        <!-- <ion-modal class="modal-calendar" #modal trigger="open-modal-3" [canDismiss]="canDismiss" [presentingElement]="page" [keepContentsMounted]="true">
+          <ng-template>
+            <ion-content>
+              <ion-datetime size="cover" showDefaultButtons="true" (ion-cancel)="showPicker" presentation="date"></ion-datetime>
+            </ion-content>
+          </ng-template>
+        </ion-modal> -->
+        <ion-button (click)="onSubmit()" id="submit" type="submit" shape="round">Cari Tiket</ion-button> 
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<!-- <ion-content [fullscreen]="true">
+  <div id="container">
+    <h1>Reservasi Tiket</h1>
+    <div id="form-input">
+      <div #page>
+        <ion-input label="Berangkat dari" label-placement="floating" fill="outline"
+        placeholder="" id="open-modal"></ion-input>
+        <ion-modal #modal trigger="open-modal" [canDismiss]="canDismiss" [presentingElement]="page">
+          <ng-template>
+            <ion-header>
+              <ion-toolbar>
+                <ion-searchbar></ion-searchbar>
+                <ion-buttons slot="end">
+                  <ion-button (click)="modal.dismiss()">X</ion-button>
+                </ion-buttons>
+              </ion-toolbar>
+            </ion-header>
+            <ion-content class="ion-padding">
+              <ion-list>
+                <ion-item>
+                  <ion-select aria-label="Fruit" placeholder="Select fruit">
+                    <ion-select-option value="apples">Apples</ion-select-option>
+                    <ion-select-option value="oranges">Oranges</ion-select-option>
+                    <ion-select-option value="bananas">Bananas</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+            </ion-content>
+          </ng-template>
+        </ion-modal>
+        <br>
+        <ion-input label="Untuk Tujuan" label-placement="floating" fill="outline"
+        placeholder="" id="open-modal-2"></ion-input>
+        <ion-modal #modal trigger="open-modal-2" [canDismiss]="canDismiss" [presentingElement]="page">
+          <ng-template>
+            <ion-header>
+              <ion-toolbar>
+                <ion-searchbar></ion-searchbar>
+                <ion-buttons slot="end">
+                  <ion-button (click)="modal.dismiss()">X</ion-button>
+                </ion-buttons>
+              </ion-toolbar>
+            </ion-header>
+            <ion-content class="ion-padding">
+              <p>
+                To close this modal, please use the "Close" button provided. Note that swiping the modal will not dismiss
+                it.
+              </p>
+            </ion-content>
+          </ng-template>
+        </ion-modal>
+        <br>
+        <ion-input label="Tanggal Berangkat" fill="outline"placeholder="" id="open-modal-3">
+          <ion-datetime-button slot="end" datetime="datetime"></ion-datetime-button>
+          <ion-button fill="clear" slot="end" aria-label="Show/hide">
+            <ion-icon name="calendar-outline" slot="end"></ion-icon>
+          </ion-button>
+        </ion-input>
+        <ion-modal class="modal-calendar" #modal trigger="open-modal-3" [canDismiss]="canDismiss" [presentingElement]="page" [keepContentsMounted]="true">
+          <ng-template>
+            <ion-content>
+              <ion-datetime size="cover" showDefaultButtons="true" (ion-cancel)="showPicker" presentation="date"></ion-datetime>
+            </ion-content>
+          </ng-template>
+        </ion-modal>
+        <ion-button (click)="onSubmit()" id="submit" type="submit" shape="round">Cari Tiket</ion-button> 
+      </div>
+    </div>
+  </div>
+</ion-content> -->

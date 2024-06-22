@@ -1,0 +1,91 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="tabs/tiket"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Invoice Pembayaran</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <div class="heading">
+      <img width="50" height="50" src="https://img.icons8.com/ios/50/van.png" alt="van"/>
+      <h1>Travely 1</h1>
+    </div>
+
+    <ion-card-content>
+      <h2>Detail Pemesanan</h2>
+      <p>Kode Pemesanan:</p>
+      <p>Waktu Pemesanan:</p>
+    </ion-card-content>
+
+    <table class="table-container">
+      <thead>
+        <tr>
+          <h1>Rincian</h1>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <h2>Rute</h2>
+            <p>tanggal dan jam Keberangkatan</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h2>Kursi 8</h2>
+            <p>Nama Penumpang</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h2>Kursi 9</h2>
+            <p>Nama Penumpang</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <ion-card-content>
+      <h2>Detail Pembayaran</h2>
+      <p>Waktu Pembayaran:</p>
+      <p>Metode Pembayaran:</p>
+    </ion-card-content>
+    <!-- <ion-grid>
+      <ion-row>
+        <h1>Rincian Pesanan</h1>
+      </ion-row>
+      <ion-row>
+        <h1>Rute</h1>
+      </ion-row>
+      <ion-row>
+        <p>tanggal dan jam Keberangkatan</p>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <h1>Rincian Pesanan</h1>
+      </ion-row>
+      <ion-row>
+        <h1>Rute</h1>
+      </ion-row>
+      <ion-row>
+        <p>tanggal dan jam Keberangkatan</p>
+      </ion-row>
+    </ion-grid> -->
+    <!-- <ion-card-header>
+      <h3 color="danger">Lunas</h3>
+    </ion-card-header> -->
+  </div>
+</ion-content>
+
+<ion-footer [translucent]="true">
+  <ion-button id="present-alert" type="submit" expand="block" shape="round" color="danger">Batalkan Pesanan</ion-button>
+  <ion-alert
+  trigger="present-alert"
+  subHeader="Apakah yakin ingin membatalkan pesanan?"
+  [buttons]="alertButtons"
+  (didDismiss)="setResult($event)"></ion-alert>
+</ion-footer>

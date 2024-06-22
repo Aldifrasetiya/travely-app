@@ -1,0 +1,29 @@
+ion-toolbar {
+    --background: #5755FE;
+    --color: white;
+    text-align: center;
+}
+
+.route > .button-content {
+    position: absolute;
+    background-color: rgba(87, 85, 254, 0);
+    width: 100%;
+    height: 100%;
+    margin: 0 !important;
+}
+
+// ion-list .route{
+//     --background-color: tomato;
+// }
+
+.route > img{
+    display: flex;
+    text-align: center;
+    margin: 10px;
+}
+
+.route > a > .arrow-img {
+    background-color: tomato;
+    margin-left: 100%;
+}
+

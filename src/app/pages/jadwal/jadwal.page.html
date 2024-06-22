@@ -1,0 +1,348 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="tabs/home/rute"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Pilih Jadwal Keberangkatan</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="jadwal">
+    <ion-card class="schedule-card">
+      <ion-button class="button-content" href="seat" fill="clear">
+      </ion-button>
+      <div class="content">      
+        <div class="row">
+          <p>Berangkat</p>
+        </div>
+        <div class="row">
+          <h5>08:00</h5>
+        </div>
+        <div class="row">
+            <ion-button id="open-custom-dialog" expand="block">Details</ion-button>
+          
+            <ion-modal id="example-modal" #modal trigger="open-custom-dialog">
+              <ng-template>
+                <div class="wrapper">
+                  <ion-header>
+                    <ion-toolbar>
+                      <!-- <ion-buttons slot="start">
+                        <ion-back-button default-href=""></ion-back-button>
+                      </ion-buttons> -->
+                      <ion-title>Detail Jadwal</ion-title>
+                    </ion-toolbar>
+                  </ion-header>
+          
+                  <ion-list lines="none">
+                    <ion-item button="true" detail="false" (click)="modal.dismiss()">
+                      <ion-icon name="radio-button-off-outline"></ion-icon>
+                      <ion-label>Keberangkatan 1</ion-label>
+                    </ion-item>
+                    <ion-item button="true" detail="false" (click)="modal.dismiss()">
+                      <!-- <ion-icon name="radio-button-on-outline"></ion-icon>
+                        <ion-label>Item 2</ion-label> -->
+                        <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                    </ion-item>
+                    <ion-item button="true" detail="false" (click)="modal.dismiss()">
+                      <ion-icon name="radio-button-on-outline"></ion-icon>
+                      <ion-label>Tujuan</ion-label>
+                    </ion-item>
+                    <div class="select">
+                      <ion-select label="Syarat dan Ketentuan" label-placement="floating" fill="outline">
+                        <!-- <ion-icon name="information-circle-outline"></ion-icon> -->
+                        <!-- <ion-select-option value="apple">Apple</ion-select-option>
+                        <ion-select-option value="banana">Banana</ion-select-option>
+                        <ion-select-option value="orange">Orange</ion-select-option> -->
+                        <ion-label>Dengan ini  anda menyatakan setuju terhadap ketentuan dan persyaratan dalam pembelian tiket.
+                          Anda akan mematuhi ketentuan dan persyaratan reservasi, termasuk pembayaran.
+                          TRAVELY berhak atas kebijakan untuk mengubah, membatalkan, menambahkan atau menghapus aspek reservasi online tiket yang anda lakukan.
+                          TRAVELY akan menggunakan informasi pribadi yang anda berikan  sebagai tujuan reservasi dan pencatatan database. </ion-label>
+                      </ion-select>
+                    </div>
+                  </ion-list>
+                </div>
+              </ng-template>
+            </ion-modal>
+          <!-- <ion-button (click)="presentPopover($event)">Details</ion-button>
+          <ion-popover #popover [isOpen]="isOpen" (didDismiss)="isOpen = false">
+            <ng-template>
+              <ion-content class="ion-padding">Hello World!</ion-content>
+            </ng-template>
+          </ion-popover> -->
+          <!-- <ion-button class="button-details" (click)="openDetails($event)">Details<img width="20" height="20" src="https://img.icons8.com/ios/50/info--v1.png" alt="info--v1"/></ion-button>
+          <ion-content class="padding">Hello World</ion-content> -->
+          <!-- <ion-popover #popover [isOpen]="isOpen" (didDismiss)="isOpen = false">
+            <ng-template>
+              <ion-content class="ion-padding">Hello World!</ion-content>
+            </ng-template>
+          </ion-popover> -->
+          <div class="price">
+            <h5>Rp. / Orang</h5>
+          </div>
+        </div>
+      </div>
+    </ion-card>
+    <ion-card class="schedule-card">
+      <ion-button class="button-content" href="seat" fill="clear">
+      </ion-button>
+      <div class="content">      
+        <div class="row">
+          <p>Berangkat</p>
+        </div>
+        <div class="row">
+          <h5>09:00</h5>
+        </div>
+        <div class="row">
+          <ion-button id="open-custom-dialog-2" expand="block">Details</ion-button>
+
+          <ion-modal id="example-modal" #modal trigger="open-custom-dialog-2">
+            <ng-template>
+              <div class="wrapper">
+                <ion-header>
+                  <ion-toolbar>
+                    <!-- <ion-buttons slot="start">
+                      <ion-back-button default-href=""></ion-back-button>
+                    </ion-buttons> -->
+                    <ion-title>Detail Jadwal 2</ion-title>
+                  </ion-toolbar>
+                </ion-header>
+        
+                <ion-list lines="none">
+                  <ion-item button="true" detail="false" (click)="modal.dismiss()">
+                    <ion-icon name="radio-button-off-outline"></ion-icon>
+                    <ion-label>Keberangkatan 1</ion-label>
+                  </ion-item>
+                  <ion-item button="true" detail="false" (click)="modal.dismiss()">
+                    <!-- <ion-icon name="radio-button-on-outline"></ion-icon>
+                      <ion-label>Item 2</ion-label> -->
+                      <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                  </ion-item>
+                  <ion-item button="true" detail="false" (click)="modal.dismiss()">
+                    <ion-icon name="radio-button-on-outline"></ion-icon>
+                    <ion-label>Tujuan</ion-label>
+                  </ion-item>
+                  <div class="select">
+                    <ion-select label="Syarat dan Ketentuan" label-placement="floating" fill="outline">
+                      <!-- <ion-icon name="information-circle-outline"></ion-icon> -->
+                      <!-- <ion-select-option value="apple">Apple</ion-select-option>
+                      <ion-select-option value="banana">Banana</ion-select-option>
+                      <ion-select-option value="orange">Orange</ion-select-option> -->
+                      <ion-label>Dengan ini  anda menyatakan setuju terhadap ketentuan dan persyaratan dalam pembelian tiket.
+                        Anda akan mematuhi ketentuan dan persyaratan reservasi, termasuk pembayaran.
+                        TRAVELY berhak atas kebijakan untuk mengubah, membatalkan, menambahkan atau menghapus aspek reservasi online tiket yang anda lakukan.
+                        TRAVELY akan menggunakan informasi pribadi yang anda berikan  sebagai tujuan reservasi dan pencatatan database. </ion-label>
+                    </ion-select>
+                  </div>
+                </ion-list>
+              </div>
+            </ng-template>
+          </ion-modal>
+          <!-- <ion-button class="button-details" (click)="presentPopover($event)"><p>Details</p><img width="20" height="20" src="https://img.icons8.com/ios/50/info--v1.png" alt="info--v1"/></ion-button>
+          <ion-popover #popover [isOpen]="isOpen" (didDismiss)="isOpen = false">
+            <ng-template>
+              <ion-content class="ion-padding">Hello World!</ion-content>
+            </ng-template>
+          </ion-popover> -->
+          <div class="price">
+            <h5>Rp. / Orang</h5>
+          </div>
+        </div>
+      </div>
+    </ion-card>
+    <ion-card class="schedule-card">
+      <ion-button class="button-content" href="seat" fill="clear">
+      </ion-button>
+      <div class="content">      
+        <div class="row">
+          <p>Berangkat</p>
+        </div>
+        <div class="row">
+          <h5>10:00</h5>
+        </div>
+        <div class="row">
+          <ion-button id="open-custom-dialog-3" expand="block">Details</ion-button>
+
+          <ion-modal id="example-modal" #modal trigger="open-custom-dialog-3">
+            <ng-template>
+              <div class="wrapper">
+                <ion-header>
+                  <ion-toolbar>
+                    <!-- <ion-buttons slot="start">
+                      <ion-back-button default-href=""></ion-back-button>
+                    </ion-buttons> -->
+                    <ion-title>Detail Jadwal 2</ion-title>
+                  </ion-toolbar>
+                </ion-header>
+        
+                <ion-list lines="none">
+                  <ion-item button="true" detail="false" (click)="modal.dismiss()">
+                    <ion-icon name="radio-button-off-outline"></ion-icon>
+                    <ion-label>Keberangkatan 1</ion-label>
+                  </ion-item>
+                  <ion-item button="true" detail="false" (click)="modal.dismiss()">
+                    <!-- <ion-icon name="radio-button-on-outline"></ion-icon>
+                      <ion-label>Item 2</ion-label> -->
+                      <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                  </ion-item>
+                  <ion-item button="true" detail="false" (click)="modal.dismiss()">
+                    <ion-icon name="radio-button-on-outline"></ion-icon>
+                    <ion-label>Tujuan</ion-label>
+                  </ion-item>
+                  <div class="select">
+                    <ion-select label="Syarat dan Ketentuan" label-placement="floating" fill="outline">
+                      <!-- <ion-icon name="information-circle-outline"></ion-icon> -->
+                      <!-- <ion-select-option value="apple">Apple</ion-select-option>
+                      <ion-select-option value="banana">Banana</ion-select-option>
+                      <ion-select-option value="orange">Orange</ion-select-option> -->
+                      <ion-label>Dengan ini  anda menyatakan setuju terhadap ketentuan dan persyaratan dalam pembelian tiket.
+                        Anda akan mematuhi ketentuan dan persyaratan reservasi, termasuk pembayaran.
+                        TRAVELY berhak atas kebijakan untuk mengubah, membatalkan, menambahkan atau menghapus aspek reservasi online tiket yang anda lakukan.
+                        TRAVELY akan menggunakan informasi pribadi yang anda berikan  sebagai tujuan reservasi dan pencatatan database. </ion-label>
+                    </ion-select>
+                  </div>
+                </ion-list>
+              </div>
+            </ng-template>
+          </ion-modal>
+          <!-- <ion-button class="button-details" (click)="presentPopover($event)"><p>Details</p><img width="20" height="20" src="https://img.icons8.com/ios/50/info--v1.png" alt="info--v1"/></ion-button>
+          <ion-popover #popover [isOpen]="isOpen" (didDismiss)="isOpen = false">
+            <ng-template>
+              <ion-content class="ion-padding">Hello World!</ion-content>
+            </ng-template>
+          </ion-popover> -->
+          <div class="price">
+            <h5>Rp. / Orang</h5>
+          </div>
+        </div>
+      </div>
+    </ion-card>
+    <ion-card class="schedule-card">
+      <ion-button class="button-content" href="seat" fill="clear">
+      </ion-button>
+      <div class="content">      
+        <div class="row">
+          <p>Berangkat</p>
+        </div>
+        <div class="row">
+          <h5>11:00</h5>
+        </div>
+        <div class="row">
+          <ion-button id="open-custom-dialog-4" expand="block">Details</ion-button>
+
+          <ion-modal id="example-modal" #modal trigger="open-custom-dialog-4">
+            <ng-template>
+              <div class="wrapper">
+                <ion-header>
+                  <ion-toolbar>
+                    <!-- <ion-buttons slot="start">
+                      <ion-back-button default-href=""></ion-back-button>
+                    </ion-buttons> -->
+                    <ion-title>Detail Jadwal 2</ion-title>
+                  </ion-toolbar>
+                </ion-header>
+        
+                <ion-list lines="none">
+                  <ion-item button="true" detail="false" (click)="modal.dismiss()">
+                    <ion-icon name="radio-button-off-outline"></ion-icon>
+                    <ion-label>Keberangkatan 1</ion-label>
+                  </ion-item>
+                  <ion-item button="true" detail="false" (click)="modal.dismiss()">
+                    <!-- <ion-icon name="radio-button-on-outline"></ion-icon>
+                      <ion-label>Item 2</ion-label> -->
+                      <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                  </ion-item>
+                  <ion-item button="true" detail="false" (click)="modal.dismiss()">
+                    <ion-icon name="radio-button-on-outline"></ion-icon>
+                    <ion-label>Tujuan</ion-label>
+                  </ion-item>
+                  <div class="select">
+                    <ion-select label="Syarat dan Ketentuan" label-placement="floating" fill="outline">
+                      <!-- <ion-icon name="information-circle-outline"></ion-icon> -->
+                      <!-- <ion-select-option value="apple">Apple</ion-select-option>
+                      <ion-select-option value="banana">Banana</ion-select-option>
+                      <ion-select-option value="orange">Orange</ion-select-option> -->
+                      <ion-label>Dengan ini  anda menyatakan setuju terhadap ketentuan dan persyaratan dalam pembelian tiket.
+                        Anda akan mematuhi ketentuan dan persyaratan reservasi, termasuk pembayaran.
+                        TRAVELY berhak atas kebijakan untuk mengubah, membatalkan, menambahkan atau menghapus aspek reservasi online tiket yang anda lakukan.
+                        TRAVELY akan menggunakan informasi pribadi yang anda berikan  sebagai tujuan reservasi dan pencatatan database. </ion-label>
+                    </ion-select>
+                  </div>
+                </ion-list>
+              </div>
+            </ng-template>
+          </ion-modal>
+          <!-- <ion-button class="button-details" (click)="presentPopover($event)"><p>Details</p><img width="20" height="20" src="https://img.icons8.com/ios/50/info--v1.png" alt="info--v1"/></ion-button>
+          <ion-popover #popover [isOpen]="isOpen" (didDismiss)="isOpen = false">
+            <ng-template>
+              <ion-content class="ion-padding">Hello World!</ion-content>
+            </ng-template>
+          </ion-popover> -->
+          <div class="price">
+            <h5>Rp. / Orang</h5>
+          </div>
+        </div>
+      </div>
+    </ion-card>
+    <!-- <ion-button href="seat" slot="start" fill="clear">
+      <ion-card>
+          <ion-card-header>
+            <h1>Berangkat</h1>
+          </ion-card-header>
+          <ion-card-content>
+            <h1>08:00 WIB</h1>
+            <ion-button (click)="presentPopover($event)">Details<img width="25" height="25" src="https://img.icons8.com/ios/50/info--v1.png" alt="info--v1"/></ion-button>
+              <ion-popover #popover [isOpen]="isOpen" (didDismiss)="isOpen = false">
+                <ng-template>
+                  <ion-content class="ion-padding">Hello World!</ion-content>
+                </ng-template>
+              </ion-popover>
+            <ion-card-title>
+              <p>Tersedia 2 kursi</p>
+              <p>Rp./orang</p>
+            </ion-card-title>
+          </ion-card-content>
+        </ion-card>
+    </ion-button> -->
+    <!-- <ion-button fill="clear">
+      <ion-card>
+        <ion-card-header>
+          <h1>Berangkat</h1>
+        </ion-card-header>
+        <ion-card-content>
+          <h1>15:00 WIB</h1>
+          <ion-button id="bottom-start">Details<img width="25" height="25" src="https://img.icons8.com/ios/50/info--v1.png" alt="info--v1"/></ion-button>
+          <ion-popover trigger="bottom-start" side="bottom">
+            <ng-template>
+              <ion-content class="ion-padding">Hello World!</ion-content>
+            </ng-template>
+          </ion-popover>
+            <ion-card-title>
+              <p>Tersedia 3 kursi</p>
+              <p>Rp./orang</p>
+            </ion-card-title>
+        </ion-card-content>
+      </ion-card>
+    </ion-button> -->
+    <!-- <ion-button fill="clear">
+      <ion-card>
+        <ion-card-header>
+          <h1>Berangkat</h1>
+        </ion-card-header>
+        <ion-card-content>
+          <h1>18:00 WIB</h1>
+          <ion-button (click)="presentPopover($event)" id="bottom-start" side="buttom" alignment="start">Details<img width="25" height="25" src="https://img.icons8.com/ios/50/info--v1.png" alt="info--v1"/></ion-button>
+            <ion-popover side="bottom">
+              <ng-template>
+                <ion-content class="ion-padding">Hello World!</ion-content>
+              </ng-template>
+            </ion-popover>
+            <ion-card-title>
+              <p>Tersedia 3 kursi</p>
+              <p>Rp./orang</p>
+            </ion-card-title>
+        </ion-card-content>
+      </ion-card>
+    </ion-button> -->
+  </div>
+</ion-content>

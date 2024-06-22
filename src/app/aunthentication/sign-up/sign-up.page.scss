@@ -1,0 +1,54 @@
+// #container-full {
+//     background-color: #7db8ff;
+// }
+
+
+ion-toolbar{
+  --background: #5755FE;
+  --color: white;
+  text-align: center;
+}
+
+#container {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+  }
+
+  #container a {
+    text-decoration: none;
+    left: 100px;
+}
+
+ion-card-header{
+  text-align: start;
+}
+
+ion-card-header h1{
+  text-align: start;
+  font-weight: 600;
+}
+
+ion-card-header h1, p {
+    color: black;
+    margin: 5px 0 5px 0;
+}
+
+ion-card-header img {
+    margin: -5rem auto;
+}
+
+ion-checkbox{
+  font-size: 13px;
+  margin: 2px 0 20px 0;
+}
+
+ion-checkbox span{
+  display: flex;
+  justify-content: start;
+  font-weight: 600;
+}

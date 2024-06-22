@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div class="profile-container">
+      <div class="profile-card">
+        <img src="/assets/profile-placeholder.png" alt="Profile Picture" class="profile-img">
+        <div class="profile-info">
+          <h2>nama lengkap</h2>
+          <p>email.emailgmail.com</p>
+        </div>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="profile-actions">
+    <ion-button (click)="onSubmit()" id="submit" type="submit" shape="round" color="dark" fill="outline">Edit Profile</ion-button>
+    <ion-button id="present-alert" color="dark" fill="outline" shape="round">
+      <ion-icon slot="start" name="log-out-outline"></ion-icon>
+      Keluar
+      <ion-alert
+      trigger="present-alert"
+      subHeader="Anda yakin ingin keluar?"
+      [buttons]="alertButtons"
+      (didDismiss)="setResult($event)"></ion-alert>
+    </ion-button>
+  </div>
+</ion-content>

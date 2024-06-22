@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>GET OTP</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="sign-up"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-content class="ion-padding">
+    <h2>Verifikasi Kode OTP</h2>
+    <p>Masukan kode yang kami kirim ke email</p>
+  
+    <div class="otp-container">
+      <ion-input type="text" maxlength="1" inputmode="numeric"></ion-input>
+      <ion-input type="text" maxlength="1" inputmode="numeric"></ion-input>
+      <ion-input type="text" maxlength="1" inputmode="numeric"></ion-input>
+      <ion-input type="text" maxlength="1" inputmode="numeric"></ion-input>
+    </div>
+  
+    <!-- <div class="timer">02:32</div> -->
+    <div class="resend-link">
+      <p>Tidak menerima kode OTP? <a href="#">Kirim ulang</a></p>
+    </div>
+  
+    <!-- <ion-button expand="full" (click)="verifyOtp()">Kirim</ion-button> -->
+  </ion-content>
+</ion-content>

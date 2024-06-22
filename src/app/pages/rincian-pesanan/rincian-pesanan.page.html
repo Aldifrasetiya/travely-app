@@ -1,0 +1,67 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/info-penumpang"></ion-back-button>
+    </ion-buttons>
+    <ion-title size="large">Rincian Pesanan</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <ion-list>
+    <ion-item class="title" color="#D9D9D9">
+      <p>Kode Pesanan: 123xxxxx</p>
+    </ion-item>
+    <ion-item class="route">
+      <p>Berangkat dari</p>
+      <ion-icon name="arrow-forward-outline"></ion-icon>
+      <p>Tujuan Ke</p>
+    </ion-item>
+    <ion-item class="detail">
+      <div class="detail-label">
+        <p>18-06-2024</p>
+        <p>Keberangkatan #</p>
+        <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+        <p>Tujuan #</p>
+      </div>
+    </ion-item>
+    <ion-item class="title" color="#D9D9D9">
+      <p>Penumpang</p>
+    </ion-item>
+    <ion-item class="seat-info">
+      <div>
+        <p>Nama Penumpang 1</p>
+        <p>No Kursi: <span>8</span></p>
+      </div>
+    </ion-item>
+    <ion-item class="seat-info">
+      <div>
+        <p>Nama Penumpang 2</p>
+        <p>No Kursi: <span>9</span></p>
+      </div>
+    </ion-item>
+    <ion-item class="title" color="#D9D9D9">
+      <p>Rincian Harga</p>
+    </ion-item>
+    <ion-item class="price-details">
+      <div>
+        <p>Harga <span>Rp. 0</span></p>
+      </div>
+    </ion-item>
+    <ion-item class="price-details">
+      <div>
+        <p>Penumpang <span>x2</span></p>
+      </div>
+    </ion-item>
+    <ion-item class="total-price" color="#D9D9D9">
+      <div>
+        <p>Total Harga</p>
+        <p>Rp. 0</p>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-button href="choose-payment" id="submit" type="submit" expand="block" shape="round">Lanjutkan Pembayaran</ion-button>
+</ion-footer>

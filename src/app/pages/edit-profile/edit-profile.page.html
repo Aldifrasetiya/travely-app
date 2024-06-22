@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs/profile"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Edit Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="profile-container">
+    <div class="profile-card">
+      <img src="/assets/profile-placeholder.png" alt="Profile Picture" class="profile-img">
+      <div class="profile-info">
+        <ion-button color="dark" fill="clear">Unggah Foto</ion-button>
+      </div>
+    </div>
+  </div>
+  <div class="form">
+    <ion-input label="Nama" label-placement="floating" fill="outline" placeholder="Masukkan Nama"></ion-input>
+    <ion-input label="Email" label-placement="floating" fill="outline" placeholder="Masukkan Email"></ion-input>
+    <ion-input label="No Telepon" label-placement="floating" fill="outline" placeholder="Masukkan No Telepon"></ion-input>
+  </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-button id="submit" type="submit" expand="block" shape="round">Simpan</ion-button>
+</ion-footer>

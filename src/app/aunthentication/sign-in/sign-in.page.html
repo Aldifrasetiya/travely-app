@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <!-- <img width="70" src="assets/icon/travelyicon.png" alt="Travely Icon"> -->
+    <ion-title size="large">Selamat Datang</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-card>
+      <ion-card-header>
+        <img src="assets/icon/travelyicon2.png" alt="Travely Icon2">
+      </ion-card-header>
+    
+      <ion-card-content>
+        <!-- <h1>Login Details</h1> -->
+        <ion-input type="email" [(ngModel)]="email" label="email" label-placement="floating" fill="outline"
+          placeholder="masukkan email"></ion-input>
+        <br />
+        <ion-input type="password" [(ngModel)]="password" label="password" label-placement="floating" fill="outline" placeholder="masukkan password"></ion-input>
+        <br>
+        <a [routerLink]="['/forgot-password']" id="forgotPassword">Lupa Password?</a>
+        <br>
+        <ion-button (click)="onLogin()" id="submit" type="submit" expand="block" shape="round">Login</ion-button>
+        <h6>Tidak Punya Akun? <a href="/sign-up">Register</a></h6>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

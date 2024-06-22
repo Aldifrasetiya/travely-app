@@ -1,0 +1,108 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs/home/info-penumpang"></ion-back-button>
+    </ion-buttons>
+    <ion-title size="large">Rincian Pesanan</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <ion-list>
+    <ion-item color="#D9D9D9">
+      <p>Kode Pesanan: 123xxxxx</p> 
+    </ion-item>
+    <ion-item>
+      <p>Berangkat dari </p>
+      <ion-icon name="arrow-forward-outline"></ion-icon>
+      <p>Tujuan Ke</p>
+    </ion-item>
+    <ion-item class="detail">
+      <p>18-06-2024</p>
+      <br>
+      <p>Mitra</p>
+      <div class="detail-label">
+        <p>Keberangkatan #</p>
+        <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+        <p>Tujuan #</p>
+      </div>
+    </ion-item>
+    <ion-item color="#D9D9D9">
+      <p>Penumpang</p> 
+    </ion-item>
+    <ion-item>
+      <div class="seat-info">
+        <p>Nama Penumpang 1</p>
+        <p>No Kursi</p> 
+        <p>8</p> 
+      </div>
+    </ion-item>
+    <ion-item>
+      <div class="seat-info">
+        <p>Nama Penumpang 1</p>
+        <p>No Kursi</p> 
+        <p>8</p> 
+      </div>
+    </ion-item>
+    <ion-item color="#D9D9D9">
+      <p>Rincian Harga</p> 
+    </ion-item>
+    <ion-item>
+      <p>Harga</p>
+      <p>Rp. 0</p>
+      <div class="seat-penumpang">
+        <p>Penumpang</p>
+        <p>x2</p>
+      </div>
+    </ion-item>
+    <ion-item color="#D9D9D9">
+      <p>Total Harga</p> 
+      <p>Rp. 0</p> 
+    </ion-item>
+  </ion-list>
+
+  <ion-button id="submit" type="submit" expand="block" shape="round">Lanjut Pembayaran</ion-button>
+
+  <ion-list [inset]="true">
+    <ion-item>
+      <ion-textarea label="Comments" labelPlacement="floating" rows="5"></ion-textarea>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<!-- <ion-content [fullscreen]="true" class="ion-padding">
+    <div class="kode-pesanan">
+      <div class="title-kode-pesanan">
+        <p>Kode Pesanan: 123xxxxx</p> 
+      </div>
+      <div class="rute">
+        <p>Berangkat Dari</p>
+        <ion-icon name="arrow-forward-outline"></ion-icon>
+        <p>Tujuan Ke</p>
+        <div class="detail">
+          <p>16 Mei 2024</p>
+          <p>keberangkatan#</p>
+          <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+          <p>tujuan #</p>
+        </div>
+      </div>     
+    </div>
+    <div class="penumpang">
+      <p class="title">Penumpang</p>
+      <h5>Nama Penumpang</h5>
+      <p>No. Kursi</p>
+      <h5>Nama Penumpang</h5>
+      <p>No. Kursi</p>
+    </div>
+    <div class="rincian-harga">
+      <p class="title">Rincian Harga</p>
+      <h5>Harga</h5>
+      <h5>Rp. 0</h5>
+      <p>penumpang</p>
+      <p>x2</p>
+    </div>
+    <div class="total-harga">
+      <h5>Total Harga</h5>
+      <h5>Rp. 0</h5>
+    </div>
+</ion-content> -->

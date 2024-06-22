@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <!-- <img width="70" src="assets/icon/travelyicon.png" alt="Travely Icon"> -->
+    <ion-title size="large">Register</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/sign-in"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <img width="70" src="assets/icon/travelyicon.png" alt="Travely Icon">
+    </ion-toolbar>
+  </ion-header>
+  <div id="container">
+    <ion-text>
+      <h1>Verify Your <br> Phone Number</h1>
+      <p>We have send you an <span>One Time Password (OTP)</span>
+        one this mobile number.</p>
+      <br>
+      <p>Enter mobile no.*</p>
+      <ion-list id="list">
+        <ion-item id="item">
+          <ion-select aria-label="no" interface="popover" placeholder="+62">
+            <ion-select-option value="amerika">+1</ion-select-option>
+            <ion-select-option value="indonesia">+62</ion-select-option>
+            <ion-select-option value="philiphine">+63</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-input label="masukkan no telepon" label-placement="floating" fill="outline"></ion-input>
+      </ion-list>
+      <h6>Already have an account? <a href="/sign-in">Login</a></h6>
+    </ion-text>
+    <ion-button type="submit" expand="block">Get OTP</ion-button>
+  </div>
+</ion-content>
